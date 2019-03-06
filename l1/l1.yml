@@ -188,8 +188,8 @@ Resources:
             curl -sL https://api.github.com/repos/jeremycook123/javalab/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
             unzip *.zip
             chown -R ec2-user:ec2-user /cloudacademy
-            docker pull theiaide/theia-java
-            docker run -dit --restart unless-stopped -p 3000:3000 -v "/cloudacademy/lab:/home/project:cached" theiaide/theia-java
+            docker pull cloudacademydevops/ide:latest
+            docker run -dit --restart unless-stopped -p 3000:3000 -v "/cloudacademy/lab:/home/project:cached" cloudacademydevops/ide:latest
             echo finished!!
       Tags:
         - Key: Name
