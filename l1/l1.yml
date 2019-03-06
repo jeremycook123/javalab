@@ -180,8 +180,16 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
             #!/bin/bash
+            echo starting...
+            pwd
+            yum install -y jq
+            mkdir -p /cloudacademy/lab
+            cd /cloudacademy/lab
+            curl -sL https://api.github.com/repos/jeremycook123/javalab/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
+            unzip *.zip
+            chown -R ec2-user:ec2-user /cloudacademy
             docker pull theiaide/theia-java
-            su -c 'docker run -dit --restart unless-stopped -p 3000:3000 -v "$(pwd):/home/project:cached" theiaide/theia-java' ec2-user
+            docker run -dit --restart unless-stopped -p 3000:3000 -v "/cloudacademy/lab:/home/project:cached" theiaide/theia-java
             echo finished!!
       Tags:
         - Key: Name
