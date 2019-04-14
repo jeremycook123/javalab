@@ -186,7 +186,7 @@ Resources:
             yum install -y jq
             mkdir -p /cloudacademy/lab
             cd /cloudacademy/lab
-            curl -sL https://api.github.com/repos/jeremycook123/javalab/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
+            curl -sL https://api.github.com/repos/cloudacademy/javabasics-lab2/releases/latest | jq -r '.assets[].browser_download_url' | wget -qi -
             unzip *.zip
             chown -R ec2-user:ec2-user /cloudacademy
             docker pull cloudacademydevops/ide:latest
