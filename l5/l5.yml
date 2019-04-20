@@ -28,7 +28,7 @@ Parameters:
 
   EC2ImageId:
     Type: AWS::EC2::Image::Id
-    Default: ami-0b6204c8b1b41a8ff
+    Default: ami-04da156ff28464a6c
     Description: CloudAcademy Docker AMI id - base on Amazon Linux 2
 
 Metadata:
