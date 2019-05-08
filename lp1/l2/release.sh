@@ -16,7 +16,7 @@ fi
 #================================
 #================================
 token=$GITHUB_TOKEN
-repo=cloudacademy/javabasics-lab1
+repo=cloudacademy/javabasics-lab2
 #================================
 #================================
 
