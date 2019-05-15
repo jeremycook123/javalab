@@ -27,9 +27,9 @@ public class SimpleSwing extends JFrame {
 	//CODE2.2:Define init method and add button with custom action
 
 	public static void main(String[] args) {
-        System.out.println("Exercise: Lambda.SimpleSwing");
-        System.out.println("Type: lab-code");
-        System.out.println("Java: " + System.getProperty("java.version"));
+		System.out.println("Exercise: Lambda.SimpleSwing");
+		System.out.println("Type: lab-code");
+		System.out.println("Java: " + System.getProperty("java.version"));
 
 		//CODE2.3:Launch simple swing app
 

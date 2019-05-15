@@ -27,9 +27,9 @@ import trivera.update.lambda.compare.agenda.AgendaItemDAO;
 public class LambdaCompare {
 
 	public static void main(String[] args) {
-        System.out.println("Exercise: Lambda.LambdaCompare");
-        System.out.println("Type: lab-code");
-        System.out.println("Java: " + System.getProperty("java.version"));
+		System.out.println("Exercise: Lambda.LambdaCompare");
+		System.out.println("Type: lab-code");
+		System.out.println("Java: " + System.getProperty("java.version"));
 
 		//CODE1.1:Get list of randomized AgendaItems
 

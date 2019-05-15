@@ -21,8 +21,8 @@ public class SimpleRunnable {
 
 	public static void main(java.lang.String[] args) {
 		System.out.println("Exercise: Lambda.SimpleRunnable");
-        System.out.println("Type: lab-code");
-        System.out.println("Java: " + System.getProperty("java.version"));
+		System.out.println("Type: lab-code");
+System.out.println("Java: " + System.getProperty("java.version"));
 
 		//CODE1:Define custom runnable using lambda notation
 
