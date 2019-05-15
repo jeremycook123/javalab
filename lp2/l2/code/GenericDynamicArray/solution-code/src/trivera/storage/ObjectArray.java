@@ -20,11 +20,13 @@ import java.util.Arrays;
  * @author Trivera Technologies Tech Team.
  */
 public class ObjectArray<T> {
+	//CODE1:Declare private fields for state
 	// Internal counter for counting amount of Strings
 	private int count;
 	// Internal Storage
 	private Object[] data = new Object[5];
 
+	//CODE2:Declare public size method
 	/**
 	 * @return The number of elements in the Dynamic Array
 	 */
@@ -32,6 +34,7 @@ public class ObjectArray<T> {
 		return count;
 	}
 
+	//CODE3:Declare public get method
 	/**
 	 * Retrieve a String at a given position in the array
 	 * 
@@ -45,6 +48,7 @@ public class ObjectArray<T> {
 		return (T) data[index];
 	}
 
+	//CODE4:Declare public add method
 	/**
 	 * Add a String to the next available 'slot' in the array
 	 * 
@@ -72,6 +76,7 @@ public class ObjectArray<T> {
 		}
 	}
 
+	//CODE5:Declare public remove method
 	/**
 	 * Remove the given String from the Array. When the String value is present multiple times
 	 * it should be removed multiple times
@@ -106,6 +111,7 @@ public class ObjectArray<T> {
 		this.count = count;
 	}
 
+	//CODE6:Declare public clear method
 	/**
 	 * Remove all Stringss from the dynamic array.
 	 */

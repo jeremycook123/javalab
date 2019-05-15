@@ -58,6 +58,7 @@ ls -la
 echo ==============================
 echo
 
+echo https://api.github.com/repos/$repo/releases
 read -p "Press [Enter] key to start release upload..."
 
 upload_url=$(curl -s -u $GITHUB_USER:$GITHUB_TOKEN \

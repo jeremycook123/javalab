@@ -20,98 +20,17 @@ import java.util.Arrays;
  * @author Trivera Technologies Tech Team.
  */
 public class ObjectArray<T> {
-	// Internal counter for counting amount of Strings
-	private int count;
-	// Internal Storage
-	private Object[] data = new Object[5];
+	
+	//CODE1:Declare private fields for state
+	
+	//CODE2:Declare public size method
+	
+	//CODE3:Declare public get method
 
-	/**
-	 * @return The number of elements in the Dynamic Array
-	 */
-	public int size() {
-		return count;
-	}
+	//CODE4:Declare public add method
 
-	/**
-	 * Retrieve a String at a given position in the array
-	 * 
-	 * @param index
-	 *            The index in the dynamic array
-	 * @return The String at the given index. Will throw an Exception when an index
-	 *         outside of the range of the array will be requested
-	 */
-	public T get(int index) {
-		// When someone asks for data outside of array, Exception will be thrown
-		return (T) data[index];
-	}
+	//CODE5:Declare public remove method
 
-	/**
-	 * Add a String to the next available 'slot' in the array
-	 * 
-	 * @param string
-	 *            The String to be added
-	 */
-	public void add(T string) {
-		// Do not add null pointer
-		if (string == null) {
-			return;
-		}
-
-		// Add the data to the Array
-		// (increase counter after add!)
-		data[count++] = string;
-
-		// When array is full, let's create bigger array
-		if (count == data.length) {
-			// Create array, 5 bigger than the original array
-			Object[] newData = new Object[data.length + 5];
-			// Copy the data from the old array into the new Array
-			System.arraycopy(data, 0, newData, 0, data.length);
-			// Move the reference to the new array to the instance variable
-			this.data = newData;
-		}
-	}
-
-	/**
-	 * Remove the given String from the Array. When the String value is present multiple times
-	 * it should be removed multiple times
-	 * 
-	 * @param string
-	 *            The String to be removed
-	 */
-	public void remove(T string) {
-		// When param is null do nothing
-		if (string == null)
-			return;
-
-		// Create a new Array with the same size as the original array
-		Object[] newData = new Object[data.length];
-		int count = 0;
-		// Iterate over all Objects in the instance array
-		for (Object currentObject : data) {
-			// Since the array only holds null pointers at the end
-			// We can stop once reference is null
-			if (currentObject == null) {
-				break;
-			}
-			// When the String in the original array is NOT equal
-			// To the value to remove, copy to the new array
-			if (!(string.equals(currentObject))) {
-				newData[count++] = currentObject;
-			}
-		}
-		// Move the reference to the new array to the instance variable
-		this.data = newData;
-		// Set the instance counter to the amount of elements copied
-		this.count = count;
-	}
-
-	/**
-	 * Remove all Stringss from the dynamic array.
-	 */
-	public void clear() {
-		Arrays.fill(data, null);
-		this.count = 0;
-	}
-
+	//CODE6:Declare public clear method
+	
 }
