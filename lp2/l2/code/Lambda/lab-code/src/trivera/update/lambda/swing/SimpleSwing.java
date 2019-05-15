@@ -1,8 +1,5 @@
 package trivera.update.lambda.swing;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -25,32 +22,16 @@ import javax.swing.JFrame;
  */
 public class SimpleSwing extends JFrame {
 
-	private void addAction(JButton button) {
+	//CODE2.1:Create add action method using lambda notation for listner
 
-		button.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("Button Clicked");
-
-			}
-		});
-
-	}
-
-	public void init() {
-		JButton button = new JButton("Push me!");
-		addAction(button);
-		add(button);
-	}
+	//CODE2.2:Define init method and add button with custom action
 
 	public static void main(String[] args) {
-		SimpleSwing swing = new SimpleSwing();
-		swing.init();
-		swing.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		swing.setTitle("Simple Swing");
-		swing.setLocationRelativeTo(null);
-		swing.pack();
-		swing.setVisible(true);
+        System.out.println("Exercise: Lambda.SimpleSwing");
+        System.out.println("Type: lab-code");
+        System.out.println("Java: " + System.getProperty("java.version"));
+
+		//CODE2.3:Launch simple swing app
+
 	}
 }

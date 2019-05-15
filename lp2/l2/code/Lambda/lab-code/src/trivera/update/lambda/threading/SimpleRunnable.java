@@ -18,23 +18,17 @@ package trivera.update.lambda.threading;
  * @author Trivera Technologies Tech Team.
  */
 public class SimpleRunnable {
+
 	public static void main(java.lang.String[] args) {
-		Runnable runnable = new Runnable() {
+		System.out.println("Exercise: Lambda.SimpleRunnable");
+        System.out.println("Type: lab-code");
+        System.out.println("Java: " + System.getProperty("java.version"));
 
-			@Override
-			public void run() {
-				for (int a = 0; a < 50; a++) {
-					System.out.println(Thread.currentThread().getName() + ": "
-							+ a);
-					Thread.yield();
-				}
+		//CODE1:Define custom runnable using lambda notation
 
-			}
-		};
+		//CODE2:Define 3 threads
 
-		Thread t1 = new Thread(runnable, "Runnable 1");
-		t1.start();
+		//CODE3:Start and run 3 threads
 
 	}
-
 }

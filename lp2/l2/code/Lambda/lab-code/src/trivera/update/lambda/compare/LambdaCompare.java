@@ -5,7 +5,6 @@ import java.util.Comparator;
 import java.util.List;
 
 import trivera.update.lambda.compare.agenda.AgendaItem;
-import trivera.update.lambda.compare.agenda.AgendaItemComparator;
 import trivera.update.lambda.compare.agenda.AgendaItemDAO;
 
 /**
@@ -28,15 +27,17 @@ import trivera.update.lambda.compare.agenda.AgendaItemDAO;
 public class LambdaCompare {
 
 	public static void main(String[] args) {
+        System.out.println("Exercise: Lambda.LambdaCompare");
+        System.out.println("Type: lab-code");
+        System.out.println("Java: " + System.getProperty("java.version"));
 
-		List<AgendaItem> agendaItems = AgendaItemDAO.getAgendaItems();
+		//CODE1.1:Get list of randomized AgendaItems
 
-		Comparator<AgendaItem> comparator = new AgendaItemComparator();
+		//CODE1.2:Define custom comparator using lambda notation
 
-		Collections.sort(agendaItems, comparator);
+		//CODE1.3:Sort the randomized AgendaItems using custom comparator
 
-		for (AgendaItem agendaItem : agendaItems) {
-			System.out.println(agendaItem);
-		}
+		//CODE1.4:Print out the sorted AgendaItems
+
 	}
 }

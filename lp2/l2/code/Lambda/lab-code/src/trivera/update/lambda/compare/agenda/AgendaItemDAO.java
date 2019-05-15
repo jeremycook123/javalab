@@ -30,14 +30,9 @@ public class AgendaItemDAO {
 	public static List<AgendaItem> getAgendaItems() {
 		List<AgendaItem> items = new ArrayList<>();
 
-		items.add(new AgendaItem("Java Discussion", "Room 4.12",
-				generateRandomDate()));
-		items.add(new AgendaItem("Holiday Planning", "Room 1.22",
-				generateRandomDate()));
-
-		items.add(new AgendaItem("Board meeting", "Room 1.22",
-				generateRandomDate()));
-
+		items.add(new AgendaItem("Java Discussion", "Room 4.12", generateRandomDate()));
+		items.add(new AgendaItem("Holiday Planning", "Room 1.22", generateRandomDate()));
+		items.add(new AgendaItem("Board meeting", "Room 1.22", generateRandomDate()));
 		items.add(new AgendaItem("Dentist", "Far Away", generateRandomDate()));
 		items.add(new AgendaItem("Jennifer", "Home", generateRandomDate()));
 
@@ -46,9 +41,11 @@ public class AgendaItemDAO {
 
 	private static Date generateRandomDate() {
 		Calendar cal = Calendar.getInstance();
+		
 		cal.add(Calendar.DAY_OF_MONTH, randomizer.nextInt(365));
 		cal.add(Calendar.HOUR_OF_DAY, randomizer.nextInt(24));
 		cal.add(Calendar.MINUTE, randomizer.nextInt(60));
+
 		return cal.getTime();
 	}
 }

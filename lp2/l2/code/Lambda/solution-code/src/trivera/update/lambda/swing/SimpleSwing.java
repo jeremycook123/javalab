@@ -22,12 +22,12 @@ import javax.swing.JFrame;
  */
 public class SimpleSwing extends JFrame {
 
+	//CODE2.1:Create add action method using lambda notation for listner
 	private void addAction(JButton button) {
-
 		button.addActionListener(event -> System.out.println("Button Clicked"));
-
 	}
 
+	//CODE2.2:Define init method and add button with custom action
 	public void init() {
 		JButton button = new JButton("Push me!");
 		addAction(button);
@@ -35,9 +35,14 @@ public class SimpleSwing extends JFrame {
 	}
 
 	public static void main(String[] args) {
+        System.out.println("Exercise: Lambda.SimpleSwing");
+        System.out.println("Type: solution-code");
+        System.out.println("Java: " + System.getProperty("java.version"));
+
+		//CODE2.3:Launch simple swing app
 		SimpleSwing swing = new SimpleSwing();
 		swing.init();
-		swing.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		swing.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		swing.setTitle("Simple Swing");
 		swing.setLocationRelativeTo(null);
 		swing.pack();

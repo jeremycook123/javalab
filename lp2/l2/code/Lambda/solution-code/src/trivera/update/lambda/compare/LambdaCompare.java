@@ -27,9 +27,14 @@ import trivera.update.lambda.compare.agenda.AgendaItemDAO;
 public class LambdaCompare {
 
 	public static void main(String[] args) {
+        System.out.println("Exercise: Lambda.LambdaCompare");
+        System.out.println("Type: solution-code");
+        System.out.println("Java: " + System.getProperty("java.version"));
 
+		//CODE1.1:Get list of randomized AgendaItems
 		List<AgendaItem> agendaItems = AgendaItemDAO.getAgendaItems();
 
+		//CODE1.2:Define custom comparator using lambda notation
 		Comparator<AgendaItem> comparator = (agenda1, agenda2) -> {
 			if (agenda1 == null)
 				return -1;
@@ -38,8 +43,10 @@ public class LambdaCompare {
 			return agenda1.getDateTime().compareTo(agenda2.getDateTime());
 		};
 
+		//CODE1.3:Sort the randomized AgendaItems using custom comparator
 		Collections.sort(agendaItems, comparator);
 
+		//CODE1.4:Print out the sorted AgendaItems
 		for (AgendaItem agendaItem : agendaItems) {
 			System.out.println(agendaItem);
 		}
