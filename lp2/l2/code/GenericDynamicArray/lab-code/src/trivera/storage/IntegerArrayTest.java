@@ -2,6 +2,7 @@ package trivera.storage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;	
 
 class IntegerArrayTest {
@@ -13,20 +14,6 @@ class IntegerArrayTest {
 		System.out.println("Java: " + System.getProperty("java.version"));
 	}
 
-	//COD15:Test empty object array of integer
-
-	//CODE16:Test adding 1 integer to object array of integer
-
-	//CODE17:Test adding and removing one integer to object array of integer
-
-	//CODE18:Test adding 100 integer to object array of integer
-
-	//CODE19:Test adding and getting integer from object array of integer
-
-	//CODE20:Test removing integer from object array of integer by id
-
-	//CODE21:Test clearing object array of integer
-
-	//CODE22:Test reusing an existing object array of integer
+	//CODE8:Implement Tests to test ObjectArray<Integer> array
 
 }

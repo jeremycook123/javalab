@@ -22,7 +22,7 @@ import javax.swing.JFrame;
  */
 public class SimpleSwing extends JFrame {
 
-	//CODE2.1:Create add action method using lambda notation for listner
+	//CODE2.1:Create add action method using lambda notation for listener
 	private void addAction(JButton button) {
 		button.addActionListener(event -> System.out.println("Button Clicked"));
 	}

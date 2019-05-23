@@ -22,7 +22,7 @@ import javax.swing.JFrame;
  */
 public class SimpleSwing extends JFrame {
 
-	//CODE2.1:Create add action method using lambda notation for listner
+	//CODE2.1:Create add action method using lambda notation for listener
 
 	//CODE2.2:Define init method and add button with custom action
 

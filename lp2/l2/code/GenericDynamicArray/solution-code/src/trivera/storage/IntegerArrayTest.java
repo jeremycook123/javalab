@@ -2,6 +2,7 @@ package trivera.storage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;	
 
 class IntegerArrayTest {
@@ -13,7 +14,7 @@ class IntegerArrayTest {
 		System.out.println("Java: " + System.getProperty("java.version"));
 	}
 
-	//COD15:Test empty object array of integer
+	//CODE8:Implement Tests to test ObjectArray<Integer> array
 	@Test
 	public void testSize() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -21,7 +22,6 @@ class IntegerArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE16:Test adding 1 integer to object array of integer
 	@Test
 	public void testSize1() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -31,7 +31,6 @@ class IntegerArrayTest {
 		assertEquals(1, size);
 	}
 
-	//CODE17:Test adding and removing one integer to object array of integer
 	@Test
 	public void testSizeAfterRemove() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -42,7 +41,6 @@ class IntegerArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE18:Test adding 100 integer to object array of integer
 	@Test
 	public void testAdd() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -53,7 +51,6 @@ class IntegerArrayTest {
 		assertEquals(100, size);
 	}
 
-	//CODE19:Test adding and getting integer from object array of integer
 	@Test
 	public void testGet() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -65,7 +62,6 @@ class IntegerArrayTest {
 		assertEquals(object1, 2);
 	}
 
-	//CODE20:Test removing integer from object array of integer by id
 	@Test
 	public void testRemove() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -80,7 +76,6 @@ class IntegerArrayTest {
 		assertEquals(2, size);
 	}
 
-	//CODE21:Test clearing object array of integer
 	@Test
 	public void testClear() {
 		ObjectArray<Integer> array = new ObjectArray<>();
@@ -91,7 +86,6 @@ class IntegerArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE22:Test reusing an existing object array of integer
 	@Test
 	public void testArrayReuse() {
 		ObjectArray<Integer> array = new ObjectArray<>();
