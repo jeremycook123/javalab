@@ -43,6 +43,7 @@ public class ObjectArray<T> {
 	 * @return The String at the given index. Will throw an Exception when an index
 	 *         outside of the range of the array will be requested
 	 */
+	@SuppressWarnings("unchecked")
 	public T get(int index) {
 		// When someone asks for data outside of array, Exception will be thrown
 		return (T) data[index];

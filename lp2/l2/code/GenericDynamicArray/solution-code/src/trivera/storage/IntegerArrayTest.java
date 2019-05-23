@@ -93,7 +93,8 @@ class IntegerArrayTest {
 		array.add(2);
 		array.clear();
 		array.add(3);
-		assertEquals(3, array.get(0));
+        Object object0 = array.get(0);
+		assertEquals(object0, 3);
 	}	
 
 }
