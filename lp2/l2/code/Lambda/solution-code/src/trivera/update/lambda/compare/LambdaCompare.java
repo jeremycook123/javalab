@@ -43,10 +43,17 @@ public class LambdaCompare {
 			return agenda1.getDateTime().compareTo(agenda2.getDateTime());
 		};
 
-		//CODE1.3:Sort the randomized AgendaItems using custom comparator
+		//CODE1.3:Print out UNSORTED AgendaItems
+		System.out.println("before sort:");
+		for (AgendaItem agendaItem : agendaItems) {
+			System.out.println(agendaItem);
+		}
+
+		//CODE1.4:Sort the randomized AgendaItems using custom comparator
 		Collections.sort(agendaItems, comparator);
 
-		//CODE1.4:Print out the sorted AgendaItems
+		//CODE1.5:Print out SORTED AgendaItems
+		System.out.println("after sort:");
 		for (AgendaItem agendaItem : agendaItems) {
 			System.out.println(agendaItem);
 		}

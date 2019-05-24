@@ -28,16 +28,18 @@ public class LambdaCompare {
 
 	public static void main(String[] args) {
 		System.out.println("Exercise: Lambda.LambdaCompare");
-		System.out.println("Type: lab-code");
+		System.out.println("Type: solution-code");
 		System.out.println("Java: " + System.getProperty("java.version"));
 
 		//CODE1.1:Get list of randomized AgendaItems
 
 		//CODE1.2:Define custom comparator using lambda notation
 
-		//CODE1.3:Sort the randomized AgendaItems using custom comparator
+		//CODE1.3:Print out UNSORTED AgendaItems
 
-		//CODE1.4:Print out the sorted AgendaItems
+		//CODE1.4:Sort the randomized AgendaItems using custom comparator
+
+		//CODE1.5:Print out SORTED AgendaItems
 
 	}
 }
