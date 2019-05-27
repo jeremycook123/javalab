@@ -22,13 +22,13 @@ public class SimpleRunnable {
 	public static void main(java.lang.String[] args) {
 		System.out.println("Exercise: Lambda.SimpleRunnable");
 		System.out.println("Type: lab-code");
-System.out.println("Java: " + System.getProperty("java.version"));
+		System.out.println("Java: " + System.getProperty("java.version"));
 
-		//CODE1:Define custom runnable using lambda notation
+		//CODE3.1:Define custom runnable using lambda notation
 
-		//CODE2:Define 3 threads
+		//CODE3.2:Define 3 threads
 
-		//CODE3:Start and run 3 threads
+		//CODE3.3:Start and run 3 threads
 
 	}
 }

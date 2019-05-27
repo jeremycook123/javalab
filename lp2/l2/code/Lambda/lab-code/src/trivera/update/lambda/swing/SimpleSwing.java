@@ -20,6 +20,7 @@ import javax.swing.JFrame;
  * 
  * @author Trivera Technologies Tech Team.
  */
+@SuppressWarnings("serial")
 public class SimpleSwing extends JFrame {
 
 	//CODE2.1:Create add action method using lambda notation for listener

@@ -24,7 +24,7 @@ public class SimpleRunnable {
 		System.out.println("Type: solution-code");
 		System.out.println("Java: " + System.getProperty("java.version"));
 
-		//CODE1:Define custom runnable using lambda notation
+		//CODE3.1:Define custom runnable using lambda notation
 		Runnable runnable = () -> {
 			for (int a = 0; a < 100; a++) {
 				System.out.println(Thread.currentThread().getName() + ": " + a);
@@ -32,12 +32,12 @@ public class SimpleRunnable {
 			}
 		};
 
-		//CODE2:Define 3 threads
+		//CODE3.2:Define 3 threads
 		Thread t1 = new Thread(runnable, "Runnable 1");
 		Thread t2 = new Thread(runnable, "Runnable 2");
 		Thread t3 = new Thread(runnable, "Runnable 3");
 
-		//CODE3:Start and run 3 threads
+		//CODE3.3:Start and run 3 threads
 		t1.start();
 		t2.start();
 		t3.start();
