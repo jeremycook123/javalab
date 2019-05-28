@@ -42,17 +42,17 @@ public class CardClient {
 
 		System.out.println("Sorted using external comparator");
 
-		//CODE3:implement and override the compareTo method
+		//CODE3:create suit and number comparators
 		Comparator<Card> compareBySuit = Comparator.comparing(Card::getSuit);
 		Comparator<Card> compareByNumber = Comparator.comparing(Card::getNumber);
 
-		//CODE4:implement and override the compareTo method
+		//CODE4:create combined comparator to sort by suit and then number
 		Comparator<Card> combined = compareBySuit.thenComparing(compareByNumber);
 
-		//CODE5:implement and override the compareTo method
+		//CODE5:sort cards using custom combined comparator
 		deckOfCards.sort(combined);
 
-		//CODE6:print out the custom combine ordered deck of cards
+		//CODE6:print out the custom combined ordered deck of cards
 		deckOfCards.forEach(System.out::println);
 
 	}

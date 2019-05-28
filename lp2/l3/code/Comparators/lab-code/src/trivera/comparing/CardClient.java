@@ -39,13 +39,13 @@ public class CardClient {
 
 		System.out.println("Sorted using external comparator");
 
-		//CODE3:implement and override the compareTo method
+		//CODE3:create suit and number comparators
 
-		//CODE4:implement and override the compareTo method
+		//CODE4:create combined comparator to sort by suit and then number
 
-		//CODE5:implement and override the compareTo method
+		//CODE5:sort cards using custom combined comparator
 
-		//CODE6:print out the custom combine ordered deck of cards
+		//CODE6:print out the custom combined ordered deck of cards
 
 	}
 

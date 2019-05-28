@@ -1,14 +1,15 @@
 package trivera.collection.movie.test;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.fail;	
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.sameInstance;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 import java.util.Map;
-
-import org.junit.Assert;
-import org.junit.Test;
 
 import trivera.collections.movie.service.Movie;
 import trivera.collections.movie.service.MovieService;
@@ -35,6 +36,13 @@ public class MovieServiceTest {
 	public static final String DREAMWORKS_STUDIO_NAME = "DreamWorks Animated";
 
 	private MovieService movieService = new MovieService();
+
+	@BeforeAll
+	public static void log() {
+		System.out.println("Exercise: UsingCollections - MovieServiceTest");
+		System.out.println("Type: solution-code");
+		System.out.println("Java: " + System.getProperty("java.version"));
+	}
 
 	@Test
 	public void testGetMoviesByStudio() {
@@ -76,7 +84,7 @@ public class MovieServiceTest {
 			if (!movieStudio.equals(currentStudio)) {
 
 				if (movie.getStudio().compareTo(currentStudio) < 0) {
-					Assert.fail("Movies not sorted by Studio");
+					fail("Movies not sorted by Studio");
 				}
 				currentStudio = movie.getStudio();
 			}
@@ -96,7 +104,7 @@ public class MovieServiceTest {
 				movieTitle = "";
 			}
 			if (movie.getTitle().compareTo(movieTitle) < 0) {
-				Assert.fail("Movies not sorted by Title");
+				fail("Movies not sorted by Title");
 			}
 			movieTitle = movie.getTitle();
 		}

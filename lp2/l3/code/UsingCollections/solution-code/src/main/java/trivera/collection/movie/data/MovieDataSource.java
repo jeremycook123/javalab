@@ -60,7 +60,7 @@ public class MovieDataSource {
 	private void readDataFiles() {
 		List<Movie> movieData = new ArrayList<>();
 		try (Stream<String> stream = new BufferedReader(
-				new InputStreamReader(getClass().getResourceAsStream("movies.dat"))).lines();) {
+				new InputStreamReader(getClass().getResourceAsStream("/movies.dat"))).lines();) {
 			stream.forEach(line -> movieData.add(createObject(line)));
 		}
 
@@ -69,6 +69,8 @@ public class MovieDataSource {
 
 	private Movie createObject(String data) {
 		String[] fields = data.split(";");
+		//System.out.println(fields[1]);
+
 		Movie movie = new Movie();
 		movie.setId(Integer.parseInt(fields[0]));
 		movie.setTitle(fields[1]);

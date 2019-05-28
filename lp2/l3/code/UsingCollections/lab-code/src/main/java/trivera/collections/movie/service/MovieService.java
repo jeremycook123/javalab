@@ -30,7 +30,11 @@ import trivera.collection.movie.data.MovieDataSource;
  */
 public class MovieService {
 
-	private MovieDataSource movieDataSource = MovieDataSource.getInstance();
+	private MovieDataSource movieDataSource = null;
+
+	public MovieService() {
+		movieDataSource = MovieDataSource.getInstance();
+	}
 
 	/**
 	 * Returns a Set of Studios present in this DataSource
@@ -39,7 +43,6 @@ public class MovieService {
 	 */
 	public Set<String> getStudios() {
 		//CODE1:Return a Set of Studios present in this DataSource
-		return movieDataSource.getStudios();
 	}
 
 	/**
@@ -52,8 +55,6 @@ public class MovieService {
 	 */
 	public List<Movie> getMoviesByStudio(String studio) {
 		//CODE2:Return a List of zero or more movies. Empty list is returned when studio is not found
-		Map<String, List<Movie>> moviesByStudio = movieDataSource.getMoviesByStudio();
-		return moviesByStudio.getOrDefault(studio, Collections.emptyList());
 	}
 
 	/**
@@ -66,9 +67,6 @@ public class MovieService {
 	 */
 	public List<Movie> addStudioIfAbsent(String studio) {
 		//CODE3:Return a List of movies for this studio
-		Map<String, List<Movie>> moviesByStudio = movieDataSource.getMoviesByStudio();
-		List<Movie> movies = moviesByStudio.computeIfAbsent(studio, s -> new ArrayList<>());
-		return movies;
 	}
 
 	/**
@@ -80,12 +78,6 @@ public class MovieService {
 	 */
 	public List<Movie> getAllMovies() {
 		//CODE4:Return a custom SORTED list of all movies
-		List<Movie> allMovies = movieDataSource.getAllMovies();
-		Comparator<Movie> studioComparator = Comparator.comparing(Movie::getStudio);
-		Comparator<Movie> titleComparator = Comparator.comparing(Movie::getTitle);
-		Comparator<Movie> combined = studioComparator.thenComparing(titleComparator);
-		allMovies.sort(combined);
-		return allMovies;
 	}
 
 	/**
@@ -96,12 +88,6 @@ public class MovieService {
 	 */
 	public Map<String, Integer> getNumberOfMoviesByStudio() {
 		//CODE5:Return a Map where the Key is the studio name and the value is the number of movies released by this studio
-		Map<String, Integer> result = new HashMap<>();
-		Map<String, List<Movie>> moviesByStudio = movieDataSource.getMoviesByStudio();
-
-		moviesByStudio.forEach((k, v) -> result.put(k, v.size()));
-
-		return result;
 	}
 
 }

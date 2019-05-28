@@ -44,7 +44,6 @@ public class Card implements Comparable<Card> {
 			return -1;
 
 		return this.number.compareTo(other.getNumber());
-
 	}
 
 	/**
@@ -113,20 +112,20 @@ public class Card implements Comparable<Card> {
 	 * @return a string representation of the card
 	 */
 	public String toString() {
-
 		return String.format("%s of %s", number, suit);
-
 	}
 
 	public boolean isHigher(Card other) {
 		if (other == null)
 			return true;
+
 		return number.isMore(other.getNumber());
 	}
 
 	public boolean isLower(Card other) {
 		if (other == null)
 			return true;
+
 		return number.isLess(other.getNumber());
 	}
 
@@ -137,15 +136,16 @@ public class Card implements Comparable<Card> {
 	 */
 	public static List<Card> getDeckOfCards() {
 		List<Card> deck = new ArrayList<>();
-		int i = 0;
+		
 		// Create the cards for each of the four suits.
 		for (Suit suit : Suit.values()) {
-
 			for (CardValue value : CardValue.values()) {
 				deck.add(new Card(suit, value));
 			}
 		}
+
 		Collections.shuffle(deck);
+
 		return deck;
 	}
 
