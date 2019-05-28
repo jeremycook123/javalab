@@ -57,6 +57,7 @@
 
     <build>
         <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>src</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -73,6 +74,30 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.0</version>
             </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/classes/trivera/collection/movie/data/</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/trivera/collection/movie/data/</directory>
+                                    <includes>
+                                        <include>movies.dat</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>            
         </plugins>
     </build>
 </project>
