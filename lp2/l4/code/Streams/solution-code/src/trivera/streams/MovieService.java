@@ -34,6 +34,7 @@ public class MovieService {
 	 * @return
 	 */
 	public long getMovieCount() {
+		//CODE1:Return the number of Movies in the entire stream
 		Stream<Movie> movies = getAllMovies();
 		long count = movies.count();
 		return count;
@@ -47,8 +48,8 @@ public class MovieService {
 	 * @return A list of 0 or more Movies
 	 */
 	public List<Movie> getMoviesByStudio(String studio) {
+		//CODE2:Filter out and return just the Movies that were produced by the given studio
 		Stream<Movie> movies = getAllMovies();
-
 		return movies.filter(movie -> studio.equals(movie.getStudio())).collect(Collectors.toList());
 	}
 
@@ -59,8 +60,8 @@ public class MovieService {
 	 * 
 	 */
 	public List<String> getGenres() {
+		//CODE3:Return a sorted list of all available genres with no duplicates
 		Stream<Movie> movies = getAllMovies();
-
 		List<String> genres = movies.map(Movie::getGenre).distinct().sorted().collect(Collectors.toList());
 		return genres;
 	}
@@ -71,6 +72,7 @@ public class MovieService {
 	 * @return a price
 	 */
 	public double getMinimumPrice() {
+		//CODE4:Return the minimum Movie price
 		Stream<Movie> movies = getAllMovies();
 
 		OptionalDouble minumum = movies.mapToDouble(Movie::getPrice).min();
@@ -88,8 +90,8 @@ public class MovieService {
 	 * @return Optionally a Movie
 	 */
 	public Optional<Movie> findMovieByTitle(String searchValue) {
+		//CODE5:Find and return a Movie that contains the given searchValue in the title
 		Stream<Movie> movies = getAllMovies();
-
 		return movies.filter(movie -> movie.getTitle().contains(searchValue)).findFirst();
 	}
 }
