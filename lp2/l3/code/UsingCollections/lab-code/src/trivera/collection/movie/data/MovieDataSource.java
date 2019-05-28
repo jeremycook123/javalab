@@ -60,7 +60,7 @@ public class MovieDataSource {
 	private void readDataFiles() {
 		List<Movie> movieData = new ArrayList<>();
 		try (Stream<String> stream = new BufferedReader(
-				new InputStreamReader(getClass().getResourceAsStream("/movies.dat"))).lines();) {
+				new InputStreamReader(getClass().getResourceAsStream("movies.dat"))).lines();) {
 			stream.forEach(line -> movieData.add(createObject(line)));
 		}
 
