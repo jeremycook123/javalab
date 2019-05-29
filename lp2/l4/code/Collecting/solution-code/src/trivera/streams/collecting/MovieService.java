@@ -40,7 +40,6 @@ public class MovieService {
 	public Map<String, Long> getMovieCountByGenre() {
 		//CODE1:Return movie count by genre
 		Stream<Movie> movies = getAllMovies();
-
 		return movies.collect(groupingBy(Movie::getGenre, counting()));
 	}
 
