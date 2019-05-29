@@ -1,5 +1,6 @@
 package trivera.comparing;
 
+import java.util.Comparator;
 import java.util.List;
 
 import trivera.comparing.model.Card;
