@@ -14,7 +14,7 @@ class StringArrayTest {
 		System.out.println("Java: " + System.getProperty("java.version"));
 	}
 
-	//CODE7:Test empty string array
+	//CODE7:create unit test to test the StringArray() implementation
 	@Test
 	public void testSize() {
 		StringArray array = new StringArray();
@@ -22,7 +22,6 @@ class StringArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE8:Test adding 1 string to string array
 	@Test
 	public void testSize1() {
 		StringArray array = new StringArray();
@@ -32,7 +31,6 @@ class StringArrayTest {
 		assertEquals(1, size);
 	}
 
-	//CODE9:Test adding and removing one string to string array
 	@Test
 	public void testSizeAfterRemove() {
 		StringArray array = new StringArray();
@@ -43,7 +41,6 @@ class StringArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE10:Test adding 100 strings to string array
 	@Test
 	public void testAdd() {
 		StringArray array = new StringArray();
@@ -54,7 +51,6 @@ class StringArrayTest {
 		assertEquals(100, size);
 	}
 
-	//CODE11:Test adding and getting string from string array
 	@Test
 	public void testGet() {
 		StringArray array = new StringArray();
@@ -66,7 +62,6 @@ class StringArrayTest {
 		assertEquals(object1, "B");
 	}
 
-	//CODE12:Test removing string from string array by id
 	@Test
 	public void testRemove() {
 		StringArray array = new StringArray();
@@ -83,7 +78,6 @@ class StringArrayTest {
 		assertEquals("C", array.get(1));
 	}
 
-	//CODE13:Test clearing string array
 	@Test
 	public void testClear() {
 		StringArray array = new StringArray();
@@ -94,7 +88,6 @@ class StringArrayTest {
 		assertEquals(0, size);
 	}
 
-	//CODE14:Test reusing an existing string array
 	@Test
 	public void testArrayReuse() {
 		StringArray array = new StringArray();
