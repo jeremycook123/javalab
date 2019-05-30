@@ -46,6 +46,7 @@ public class ReservationDAOImpl implements ReservationDAO {
 		return reservation;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Reservation> getReservations(LocalDate date) {
 		Query query = entityManager.createQuery(JP_QL_SELECT);
 		query.setParameter("date", date);
