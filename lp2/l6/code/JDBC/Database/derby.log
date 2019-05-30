@@ -1,0 +1,11 @@
+Thu May 30 11:01:01 NZST 2019 : Apache Derby Network Server - 10.9.1.0 - (1344872) started and ready to accept connections on port 50505
+----------------------------------------------------------------
+Thu May 30 11:03:58 NZST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-016b-05d2-e3d4-00003b3788d9 
+on database directory /Users/jeremycook/github/jeremycook123/javalab/lp2/l6/code/JDBC/Database/MovieDB  with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@799f7e29 
+Loaded from file:/Users/jeremycook/github/jeremycook123/javalab/lp2/l6/code/JDBC/Database/Derby/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.2+9
+user.dir=/Users/jeremycook/github/jeremycook123/javalab/lp2/l6/code/JDBC/Database
+derby.system.home=/Users/jeremycook/github/jeremycook123/javalab/lp2/l6/code/JDBC/Database
+Database Class Loader started - derby.database.classpath=''
