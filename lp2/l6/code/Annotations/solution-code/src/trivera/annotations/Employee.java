@@ -21,7 +21,7 @@ import trivera.annotations.writer.Persist;
  * 
  * @author Trivera Technologies Tech Team.
  */
-//CODE5:Annotate the Employee class with the custom @Persist annotation
+//CODE4:Annotate the Employee class with the custom @Persist annotation
 @Persist(filename = "employee")
 public class Employee implements Serializable {
 	private static final long serialVersionUID = 2619086449142429909L;
@@ -38,7 +38,7 @@ public class Employee implements Serializable {
 		this.name = name;
 	}
 
-	//CODE6:Annotate the getEmployeeID class with the custom @Identifier annotation
+	//CODE5:Annotate the getEmployeeID class with the custom @Identifier annotation
 	@Identifier
 	public String getEmployeeID() {
 		return employeeID;

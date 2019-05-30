@@ -28,7 +28,7 @@ public class Application {
 		Employee emp1 = new Employee("1", "Jeremy");
 		Employee emp2 = new Employee("2", "Fred");
 
-		//CODE7:Call the WriterService to persist the Employee objects to disk
+		//CODE6:Call the WriterService to persist the Employee objects to disk
 		WriterService service = new WriterService();
 		service.writeObject(emp1);
 		service.writeObject(emp2);
