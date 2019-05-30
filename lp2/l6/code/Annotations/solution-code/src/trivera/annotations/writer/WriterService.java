@@ -63,15 +63,6 @@ public class WriterService {
 	 * Write object instance to file	
 	 * @param obj the object to Serialize
 	 * @param filename The filename (without extension!)
-	 */
-	private void writeObject(Serializable obj, String filename) {
-		writeObject(obj, filename, null);
-	}
-
-	/**
-	 * Write object instance to file	
-	 * @param obj the object to Serialize
-	 * @param filename The filename (without extension!)
 	 * @param identifier the identifier value of this instance
 	 */
 	private void writeObject(Serializable obj, String filename, Object identifier) {
