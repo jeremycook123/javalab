@@ -9,7 +9,7 @@
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:50505/ReservationDB;create=true" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:50506/ReservationDB;create=true" />
 			<property name="javax.persistence.jdbc.user" value="Development" />
 			<property name="javax.persistence.jdbc.password" value="password" />
 
